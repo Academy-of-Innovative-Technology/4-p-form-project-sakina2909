@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Game Tournament Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="form-container">
+    <h2>🎮 Game Tournament Registration</h2>
+
+    <form id="tournamentForm">
+
+        <fieldset>
+            <legend>Account Information</legend>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required pattern="[A-Za-z0-9]{5,12}" 
+                   title="Username must be 5-12 characters, letters and numbers only">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Game Preferences</legend>
+
+            <label for="game">Select Your Game:</label>
+            <input list="games" id="game" name="game" required>
+
+            <datalist id="games">
+                <option value="Fortnite">
+                <option value="Minecraft">
+                <option value="Call of Duty">
+                <option value="Valorant">
+                <option value="Apex Legends">
+            </datalist>
+
+            <label>Skill Level:</label>
+            <input type="radio" name="skill" value="Beginner" class="inline" required> Beginner
+            <input type="radio" name="skill" value="Intermediate" class="inline"> Intermediate
+            <input type="radio" name="skill" value="Advanced" class="inline"> Advanced
+
+            <label>Available Days:</label>
+            <input type="checkbox" name="days" value="Friday" class="inline"> Friday
+            <input type="checkbox" name="days" value="Saturday" class="inline"> Saturday
+            <input type="checkbox" name="days" value="Sunday" class="inline"> Sunday
+        </fieldset>
+
+        <input type="submit" value="Register Now" class="submit-btn">
+
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
